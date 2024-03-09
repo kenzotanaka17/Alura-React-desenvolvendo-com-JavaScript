@@ -11,7 +11,7 @@ const Time = (props) => {
         <section className='time' style={secundaryC}>
             <h3 style={primaryC}>{props.nome}</h3>
             <div className='colaboradores'>
-                {props.colaboradores.map( colaborador => <Colaborador nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem}/>)}
+                {props.colaboradores.map( colaborador => <Colaborador corDeFundo={props.corPrimaria} key={colaborador.nome} idade={colaborador.idade} nome={colaborador.nome} time={colaborador.time} imagem={colaborador.imagem}/>)}
             </div>
         </section>
     )

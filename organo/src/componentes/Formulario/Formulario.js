@@ -7,7 +7,7 @@ import './Formulario.css'
 const Formulario = (props) => {
 
     const[nome, setNome] = useState('');
-    const[cargo, setCargo] = useState('');
+    const[idade, setIdade] = useState('');
     const[imagem, setImagem] = useState('');
     const[time, setTime] = useState('');
 
@@ -15,12 +15,12 @@ const Formulario = (props) => {
         evento.preventDefault();
         props.aoColaboradorCadastrado({
             nome,
-            cargo,
+            idade,
             imagem,
             time
         })
         setNome('')
-        setCargo('')
+        setIdade('')
         setImagem('')
         setTime('')
     }
@@ -28,7 +28,7 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Preencha os dados para criar um card </h2>
                 <CampoTexto 
                     obrigatorio={true} 
                     label="Nome" 
@@ -38,10 +38,10 @@ const Formulario = (props) => {
                 />
                 <CampoTexto 
                     obrigatorio={true} 
-                    label="Cargo" 
-                    placeholder="Digite seu cargo" 
-                    valor={cargo} 
-                    aoAlterado={valor => setCargo(valor)}
+                    label="Idade" 
+                    placeholder="Digite sua idade" 
+                    valor={idade} 
+                    aoAlterado={valor => setIdade(valor)}
                 />
                 <CampoTexto 
                     label="Imagem" 

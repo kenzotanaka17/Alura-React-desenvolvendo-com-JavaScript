@@ -8,46 +8,30 @@ function App() {
 
   const times = [
     {
-      nome: 'Programação',
-      corPrimaria: '#57C278',
-      corSecundaria: '#D9F8E9'
+      nome: 'Corinthians',
+      corPrimaria: '#fff',
+      corSecundaria: '#373636'
     },
     {
-      nome: 'Front-end',
-      corPrimaria: '#82cffa',
-      corSecundaria: '#E8F8EF'
+      nome: 'Palmeiras',
+      corPrimaria: '#109c00',
+      corSecundaria: '#62ad5a'
     },
     {
-      nome: 'Data Science',
-      corPrimaria: '#A6D157',
-      corSecundaria: '#F0F9E2'
+      nome: 'São Paulo',
+      corPrimaria: '#000',
+      corSecundaria: '#ff0019'
     },
     {
-      nome: 'Devops',
-      corPrimaria: '#E06869',
-      corSecundaria: '#FDE7E8'
+      nome: 'Santos',
+      corPrimaria: '#050505',
+      corSecundaria: '#4a4949'
     },
-    {
-      nome: 'UX e Design',
-      corPrimaria: '#D86EBF',
-      corSecundaria: '#FAE9F5'
-    },
-    {
-      nome: 'Mobile',
-      corPrimaria: '#FFBA05',
-      corSecundaria: '#FFF5D9'
-    },
-    {
-      nome: 'Inovação e Gestão',
-      corPrimaria: '#FF8A29',
-      corSecundaria: '#FFEEDF'
-    }
   ]
 
   const [colaboradores, setColaboradores] = useState([]);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
     setColaboradores([...colaboradores, colaborador]);
   }
 
